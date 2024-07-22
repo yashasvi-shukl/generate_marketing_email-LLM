@@ -1,0 +1,44 @@
+_type: prompt
+input_variables: 
+  ['topic', 'description', schema]
+template_format: f-string
+validate_template: true
+template: |
+  You are an expert Marking Manager at Zensar. Your task is to generate a marketing email containing promotions and offers on below 'Product Name' and 'Product Description' to achieve the 'Goal':\n\n"
+        Product Name: {topic}\n
+        Product Description: {description}\n
+        Goal: The purpose is to convert passive viewers into active customers by providing a personalized and incentive-driven communication/offer.
+        Offer: Could be either cashback of '[x]%' or discount of '[x]%' on the product where 'x' will be value between 5 to 50. 
+                Example:
+                  - cashback of 20%
+                  - discount of 15%
+  
+  Note: The final response should contain dummy recipient name & email, subject, body of the email and dummy url for the product.
+
+  Understand the goal of the marking email & offer then STRICTLY follow below instructions to generate the final response. 
+    1. Generate dummy recipient name & email id and include it into salutation.
+    2. Follow below while drafting the email:
+        a. Greet recipient and generate personalized email. 
+        b. Include the offer in the body of email and Generate a dummy URL for purchasing the product and include it to the body of email. Dummy url like https://www.zensar.com/[product_name]
+        c. Clear call to action (CTA): Tell them what you want them to do next (e.g., "Shop now", etc.)
+        d. Use short sentences and paragraphs.
+        e. Maintain consistent design and tone with your brand identity.
+        f. Create a sense of urgency: Use limited-time offers or scarcity tactics.
+        g. Offer value: Provide offer value (eg. 20% discount, 10% cashback) and exclusive recommendation.
+        h. Be authentic and transparent. Focus on building relationships with your audience.
+
+    4. Maintain a formal tone suitable for a corporate environment. 
+    5. Ensure that the generated email is of good length and well structured. Highlight the offer and make sure its exciting and interesting. 
+    6. Conclude the email with the following professional signature:\n\n
+        Best regards,
+        John Doe
+        Senior Marketing Manager
+        Zensar Technologies
+        Email: john.doe@zensar.com
+
+  $$$
+  schema: {schema}
+  $$$
+
+  AI: (your answer goes here)
+      

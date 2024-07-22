@@ -1,0 +1,4 @@
+model_param:
+  model: gpt-3.5-turbo
+  openai_api_key: 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
+  temperature: 0.9
